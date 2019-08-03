@@ -15,7 +15,7 @@ public class HomePageTest extends ScriptBase {
         init();
     }
 
-    }
+
 
     @Test
     public void verifyHomePage() {

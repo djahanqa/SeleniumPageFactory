@@ -64,7 +64,7 @@ public class HomePage extends ScriptBase {
         topSearch.sendKeys(sleeves);
         searchButton.click();
         driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed()
+        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
 
     }
         public void catagory(WebDriver driver,String Selectcatagory){
@@ -91,15 +91,10 @@ public class HomePage extends ScriptBase {
         driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='" + information + "']")).isDisplayed();
 
     }
-    public void customerService(){
+
+    public void customerService() {
         ContactUs1.click();
-        Assert.assertEquals(costomerService,costomerService);
-
-    public void myaccount (WebDriver driver,String information){
-
-        driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='"+information+"']")).isDisplayed();
-
-
+        Assert.assertEquals(costomerService, costomerService);
     }
 
 }
