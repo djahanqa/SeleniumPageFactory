@@ -14,8 +14,6 @@ public class LoginTest extends ScriptBase {
         init();
 
     }
-
-
     @Test
     public void invalidLoginVerify(){
         loginPage=new LoginPage(driver);

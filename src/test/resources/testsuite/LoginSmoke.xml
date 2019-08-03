@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/dilrubajahan/Documents/SeleniumPagefactoryFramework">
+        <classes>
+            <class name="homepage.HomePageTest">
+
+            <class name="login.LoginTest">
+                <methods>
+                    <include name="invalidLoginVerify"/>
+                    <include name="validLoginVerify"/>
+                    <include name="validLoginWithLogOutVerify"/>
+                    <include name="invalidCreateAccountVerify"/>
+                    <include name="invalidSignUpAccountVerify"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

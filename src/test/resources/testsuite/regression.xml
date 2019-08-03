@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/dilrubajahan/Documents/SeleniumPagefactoryFramework">
+        <classes>
+            <class name="homepage.HomePageTest">
+                <methods>
+                    <include name="verifyHomePage"/>
+                    <include name="searchSleeveQuantity"/>
+                    <include name="searchHatQuantity"/>
+                    <include name="searchDressesQuantity"/>
+                    <include name="searchBlouseQuantity"/>
+                    <include name="searchwomenQuantity"/>
+                    <include name="searchTshirtsQuantity"/>
+                    <include name="searchpopular"/>
+                    <include name="searchbestSeller"/>
+                    <include name="information1"/>
+                    <include name="information2"/>
+                    <include name="information3"/>
+                    <include name="information4"/>
+                    <include name="information5"/>
+                    <include name="information6"/>
+                    <include name="information7"/>
+                    <include name="information8"/>
+                    <include name="myAccount1"/>
+                    <include name="myAccount2"/>
+                    <include name="myAccount3"/>
+                    <include name="myAccount4"/>
+                </methods>
+            </class>
+            <class name="login.LoginTest">
+                <methods>
+                    <include name="invalidLoginVerify"/>
+                    <include name="validLoginVerify"/>
+                    <include name="validLoginWithLogOutVerify"/>
+                    <include name="invalidCreateAccountVerify"/>
+                    <include name="invalidSignUpAccountVerify"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
