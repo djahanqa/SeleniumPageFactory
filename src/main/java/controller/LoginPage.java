@@ -13,9 +13,11 @@ public class LoginPage extends ScriptBase {
     @FindBy(id = "email") WebElement emailSendKey;
     @FindBy(id = "passwd") WebElement passwordSendKey;
     @FindBy(css = "#SubmitLogin > span") WebElement submitButton;
-    @FindBy(linkText = "Zaman Dewan")WebElement signInSuccessful;
     @FindBy(css = "#center_column > div.alert.alert-danger > ol > li")WebElement signInMessageFailed;
+    @FindBy(linkText = "Zaman Dewan")WebElement signInSuccessful;
+
     @FindBy(xpath = "//*[@id='header']//a[@title='Log me out']")WebElement signOut;
+
     @FindBy(id = "email_create")WebElement emailCreateInput;
     @FindBy(css = "#SubmitCreate > span")WebElement submitCreateAccountButton;
     @FindBy(xpath= "//*[@id='create_account_error']")WebElement inValidEmailErrorMessage;
@@ -29,11 +31,6 @@ public class LoginPage extends ScriptBase {
 
 
 
-
-
-
-
-
     public LoginPage(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -44,8 +41,6 @@ public class LoginPage extends ScriptBase {
         passwordSendKey.sendKeys(password);
         submitButton.click();
         Assert.assertEquals(signInMessageFailed,signInMessageFailed);
-
-
     }
 
     public void validSignin(String email, String password){
@@ -55,6 +50,7 @@ public class LoginPage extends ScriptBase {
         submitButton.click();
         Assert.assertEquals(signInSuccessful,signInSuccessful);
 }
+
     public void validSigninWithLogOut(){
         signOut.click();
     }

@@ -14,11 +14,15 @@ public class HomePageTest extends ScriptBase {
     public void beforetest() {
         init();
     }
+
+    }
+
     @Test
     public void verifyHomePage() {
         homePage = new HomePage(driver);
         homePage.verifyContactUS("T-SHIRTS");
     }
+
     @Test
     public void searchSleeveQuantity(){
     homePage =new HomePage(driver);
@@ -148,6 +152,7 @@ public class HomePageTest extends ScriptBase {
         homePage.customerService();
 
     }
+
 
         @AfterTest
         public void closebrowser(){
