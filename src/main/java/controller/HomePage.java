@@ -36,8 +36,12 @@ public class HomePage extends ScriptBase {
     WebElement searchButton;
     @FindBy(xpath = "//*[@id='center_column']/h1/span[1]")
     WebElement oneResultfound;
+    @FindBy(css = "#header_logo > a > img")WebElement homepageNavigation;
 
-
+    @FindBy(css = "#contact-link > a")
+    WebElement ContactUs1;
+    @FindBy(css = "#center_column > h1")
+    WebElement costomerService;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -59,7 +63,8 @@ public class HomePage extends ScriptBase {
         topSearch.clear();
         topSearch.sendKeys(sleeves);
         searchButton.click();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
+        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
+        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed()
 
     }
         public void catagory(WebDriver driver,String Selectcatagory){
@@ -69,6 +74,8 @@ public class HomePage extends ScriptBase {
     }
 
     public void searchByDemand(WebDriver driver,String demand) {
+        homepageNavigation.click();
+        driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
         driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
 
     }
@@ -78,6 +85,15 @@ public class HomePage extends ScriptBase {
         driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='"+info+"']")).isDisplayed();
 
     }
+
+    public void myaccount (WebDriver driver,String information) {
+
+        driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='" + information + "']")).isDisplayed();
+
+    }
+    public void customerService(){
+        ContactUs1.click();
+        Assert.assertEquals(costomerService,costomerService);
 
     public void myaccount (WebDriver driver,String information){
 

@@ -13,6 +13,7 @@ public class HomePageTest extends ScriptBase {
     @BeforeTest
     public void beforetest() {
         init();
+    }
 
     }
 
@@ -33,6 +34,7 @@ public class HomePageTest extends ScriptBase {
     public void searchHatQuantity(){
         homePage =new HomePage(driver);
         homePage.seachProducts("Hat",driver,"7");
+
     }
 
     @Test
@@ -143,6 +145,15 @@ public class HomePageTest extends ScriptBase {
         homePage = new HomePage(driver);
         homePage.myaccount(driver, "Manage my personal information");
     }
+
+    @Test
+    public void verifycontactus1(){
+        homePage = new HomePage(driver);
+        homePage.customerService();
+
+    }
+
+
         @AfterTest
         public void closebrowser(){
 //            driver.close();
