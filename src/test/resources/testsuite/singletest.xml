@@ -3,9 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/dilrubajahan/Documents/SeleniumPagefactoryFramework">
         <classes>
-            <class name="homepage.HomePageTest">
+            <class name="contact.ContactTest">
                 <methods>
-                    <include name="verifycontactus1"/>
+                    <include name="varifySendAMessage"/>
 
                 </methods>
 
