@@ -15,8 +15,6 @@ public class HomePageTest extends ScriptBase {
         init();
     }
 
-
-
     @Test
     public void verifyHomePage() {
         homePage = new HomePage(driver);
@@ -137,24 +135,18 @@ public class HomePageTest extends ScriptBase {
     public void myAccount3() {
         homePage = new HomePage(driver);
         homePage.myaccount(driver, "My addresses");
-
     }
-
     @Test
     public void myAccount4() {
         homePage = new HomePage(driver);
         homePage.myaccount(driver, "Manage my personal information");
     }
-
     @Test
     public void verifycontactus1(){
         homePage = new HomePage(driver);
         homePage.customerService();
-
     }
-
-
-        @AfterTest
+    @AfterTest
         public void closebrowser(){
 //            driver.close();
 //            driver.quit();
