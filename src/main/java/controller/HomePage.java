@@ -29,13 +29,12 @@ public class HomePage extends ScriptBase {
 
     @FindBy (id="search_query_top")
     WebElement Search;
-
-    @FindBy(id = "search_query_top")
-    WebElement topSearch;
-    @FindBy(xpath = "//*[@id='searchbox']/button")
-    WebElement searchButton;
+    @FindBy(xpath = "//*[@id='searchbox']/button[@type='submit']")
+    WebElement clickButton;
     @FindBy(xpath = "//*[@id='center_column']/h1/span[1]")
     WebElement oneResultfound;
+
+
     @FindBy(css = "#header_logo > a > img")WebElement homepageNavigation;
 
     @FindBy(css = "#contact-link > a")
@@ -47,7 +46,6 @@ public class HomePage extends ScriptBase {
         PageFactory.initElements(driver, this);
     }
 
-
     public void verifyContactUS(String Shirt) {
         CallUs.click();
         PhoneNumber.click();
@@ -57,16 +55,18 @@ public class HomePage extends ScriptBase {
         ClickSearch.click();
         Assert.assertEquals(OneResultFound, OneResultFound);
 
+    }
+    public void seachspProducts(String products,WebDriver driver,String quantity){
+        Search.clear();
+        Search.sendKeys(products);
+        clickButton.click();
+        driver.findElement(By.xpath("class=\'heading-counter\'][contains(text(),'"+quantity+"results have been found.')]")).isDisplayed();
 
     }
-    public void seachProducts(String sleeves,WebDriver driver,String quantity){
-        topSearch.clear();
-        topSearch.sendKeys(sleeves);
-        searchButton.click();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
 
-    }
+
+
+
         public void catagory(WebDriver driver,String Selectcatagory){
 
         driver.findElement(By.xpath("//*[@id='block_top_menu']//li[1]/a[@title='"+Selectcatagory+"']")).isDisplayed();
