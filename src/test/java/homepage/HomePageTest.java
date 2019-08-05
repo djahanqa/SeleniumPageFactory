@@ -40,12 +40,7 @@ public class HomePageTest extends ScriptBase {
         homePage =new HomePage(driver);
         homePage.seachProducts("dress",driver,"7");
 
-    }
 
-    @Test
-    public void searchBlouseQuantity() {
-        homePage = new HomePage(driver);
-        homePage.seachProducts("Blouse", driver, "1");
     }
 
 

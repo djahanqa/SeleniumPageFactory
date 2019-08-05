@@ -63,7 +63,7 @@ public class HomePage extends ScriptBase {
         topSearch.clear();
         topSearch.sendKeys(sleeves);
         searchButton.click();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" result has been found.')]")).isDisplayed();
+
         driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
 
     }
