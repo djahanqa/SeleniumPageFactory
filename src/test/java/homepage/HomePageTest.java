@@ -31,21 +31,15 @@ public class HomePageTest extends ScriptBase {
     @Test
     public void searchHatQuantity(){
         homePage =new HomePage(driver);
-        homePage.seachspProducts("Hat",driver,"7");
+        homePage.seachspProducts("HAT",driver,"7");
 
     }
 
     @Test
     public void searchDressesQuantity(){
         homePage =new HomePage(driver);
-        homePage.seachspProducts("dress",driver,"7");
+        homePage.seachspProducts("DRESS",driver,"7");
 
-    }
-
-    @Test
-    public void searchBlouseQuantity() {
-        homePage = new HomePage(driver);
-        homePage.seachspProducts("Blouse", driver, "1");
     }
 
 
@@ -148,7 +142,7 @@ public class HomePageTest extends ScriptBase {
     }
     @AfterTest
         public void closebrowser(){
-            driver.quit();
+           // driver.quit();
 
     }
 
