@@ -24,7 +24,8 @@ public class ContactPage extends ScriptBase {
 
 
     public ContactPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+
+        PageFactory.initElements(driver,this);
     }
 
 public void messagesent(String email,String reference,String messages){

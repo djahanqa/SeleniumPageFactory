@@ -13,6 +13,7 @@ public class CotactTest extends ScriptBase {
         public void beforetest() {
             init();
         }
+
         @Test
         public void varifyMessageSent(){
             contactPage=new ContactPage(driver);
@@ -23,4 +24,5 @@ public class CotactTest extends ScriptBase {
         public void closebrowser() {
             driver.close();
             driver.quit();
-        }}
+        }
+}

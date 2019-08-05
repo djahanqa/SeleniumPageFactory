@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import java.util.concurrent.TimeUnit;
+
 
 public class HomePage extends ScriptBase {
 
@@ -71,13 +71,14 @@ public class HomePage extends ScriptBase {
     public void searchByDemand(WebDriver driver,String demand) {
         homepageNavigation.click();
         driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
-        driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
+
 
     }
 
     public void informationTree(WebDriver driver,String info){
 
         driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='"+info+"']")).isDisplayed();
+
 
     }
 
