@@ -3,11 +3,14 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/dilrubajahan/Documents/SeleniumPagefactoryFramework">
         <classes>
-            <class name="contact.CotactTest">
+            <class name="homepage.HomePageTest">
                 <methods>
-                    <include name="varifyMessageSent"/>
+                    <include name="verifyHomePage"/>
 
                 </methods>
+            </class>
+            <class name="login.LoginTest">
+                <methods/>
 
             </class>
         </classes>
