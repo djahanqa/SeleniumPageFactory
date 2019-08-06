@@ -13,6 +13,8 @@ public class CartPage extends ScriptBase {
     WebElement cart;
     @FindBy (id="cart_title")
     WebElement cartTitle;
+    @FindBy(css = "#center_column > p")
+    WebElement cartMessage;
 
     public CartPage(WebDriver driver) {
 
@@ -27,7 +29,7 @@ public class CartPage extends ScriptBase {
     }
     public void shoppincartsummary(WebDriver driver,String summary){
         driver.findElement(By.xpath("//*[@id=\"order_step\"]/li/span[contains(text(),'" + summary + "')]")).isDisplayed();
-
+        cartMessage.isDisplayed();
     }
 
 }
