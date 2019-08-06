@@ -38,7 +38,7 @@ public class HomePage extends ScriptBase {
     @FindBy(css = "#contact-link > a")
     WebElement ContactUs1;
     @FindBy(css = "#center_column > h1")
-    WebElement costomerService;
+    WebElement customerService;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -90,7 +90,7 @@ public class HomePage extends ScriptBase {
 
     public void customerService() {
         ContactUs1.click();
-        Assert.assertEquals(costomerService, costomerService);
+        Assert.assertEquals(customerService,customerService);
     }
 
 }
