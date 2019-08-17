@@ -1,5 +1,6 @@
 package cart;
 
+
 import base.ScriptBase;
 import controller.CartPage;
 import controller.ContactPage;
@@ -54,3 +55,6 @@ public class CartPageTest extends ScriptBase {
         }
     }
 
+
+public class CartPageTest {
+}

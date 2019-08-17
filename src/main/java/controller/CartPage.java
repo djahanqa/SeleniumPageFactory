@@ -1,5 +1,6 @@
 package controller;
 
+
 import base.ScriptBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,5 @@ public class CartPage extends ScriptBase {
         driver.findElement(By.xpath("//span[contains(text(),'"+summary+"')]")).isDisplayed();
         cartMessage.isDisplayed();
     }
-
 
 }
