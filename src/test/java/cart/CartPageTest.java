@@ -56,5 +56,3 @@ public class CartPageTest extends ScriptBase {
     }
 
 
-public class CartPageTest {
-}
