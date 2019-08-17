@@ -21,15 +21,18 @@ public class CartPage extends ScriptBase {
         PageFactory.initElements(driver,this);
     }
 
-    public void shoppingcart() {
+    public void shoppingcart(String summary,WebDriver driver) {
         cart.click();
         Assert.assertEquals(cartTitle, cartTitle);
+        shoppincartsummary(driver,summary);
 
 
     }
+
     public void shoppincartsummary(WebDriver driver,String summary){
-        driver.findElement(By.xpath("//*[@id=\"order_step\"]/li/span[contains(text(),'" + summary + "')]")).isDisplayed();
+        driver.findElement(By.xpath("//span[contains(text(),'"+summary+"')]")).isDisplayed();
         cartMessage.isDisplayed();
     }
+
 
 }
