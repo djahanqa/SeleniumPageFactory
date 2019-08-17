@@ -42,7 +42,6 @@ public class CartPageTest extends ScriptBase {
     }
 
 
-
     @Test
     public void verifycartPaymentBar() {
         cartPage = new CartPage(driver);
