@@ -7,13 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import org.openqa.selenium.support.ui.Select;
-
-public class ContactPage extends ScriptBase {
-
-
 import org.testng.Assert;
-
-import java.util.concurrent.TimeUnit;
 
 public class ContactPage extends ScriptBase {
 
@@ -32,9 +26,7 @@ public class ContactPage extends ScriptBase {
     WebElement message;
 
 
-    public ContactPage(WebDriver driver) {
-
-        PageFactory.initElements(driver,this);
+    public ContactPage(WebDriver driver) { PageFactory.initElements(driver,this);
     }
 
 public void messagesent(String email,String reference,String messages){
@@ -52,23 +44,17 @@ public void dropdown(WebElement element,String value){
         select.selectByVisibleText(value);
 }
 
-}
-
-
     @FindBy(id ="email")
-    WebElement emailinput;
+    WebElement emailaddress;
     @FindBy (id = "#id_order")
     WebElement oderReference;
     @FindBy(id="message")
-    WebElement message;
+    WebElement messageentered;
     @FindBy (css = "submitMessage")
     WebElement clickSend;
     @FindBy(css = "#center_column > div > p")
     WebElement oneErrorfound;
 
-    public ContactPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
 
     public void customerService() {
         contactUs1.click();
@@ -77,9 +63,9 @@ public void dropdown(WebElement element,String value){
     }
     public void sendmessage(String email,String reference,String messages) {
             contactUs1.click();
-            emailinput.sendKeys(email);
+            emailaddress.sendKeys(email);
             oderReference.sendKeys(reference);
-            message.sendKeys(messages);
+            messageentered.sendKeys(messages);
             clickSend.click();
             Assert.assertEquals(oneErrorfound,oneErrorfound);
 

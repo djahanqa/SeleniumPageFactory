@@ -21,7 +21,6 @@ public class CartPageTest extends ScriptBase {
         public void verifycartpage(){
             cartPage=new CartPage(driver);
             cartPage.shoppingcart("Summary",driver);
-
         }
     @Test
     public void verifycartSiginBar() {
@@ -56,5 +55,3 @@ public class CartPageTest extends ScriptBase {
     }
 
 
-public class CartPageTest {
-}

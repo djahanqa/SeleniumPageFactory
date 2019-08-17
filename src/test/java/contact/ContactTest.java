@@ -25,14 +25,10 @@ public class ContactTest extends ScriptBase {
         contactPage.sendmessage("djahan@yahoo.com","123456","please take a look at my order");
 
     }
-
     @AfterTest
     public void closebrowser(){
-//            driver.close();
-//            driver.quit();
-
-
-
+            driver.close();
+            driver.quit();
     }
 
 }
