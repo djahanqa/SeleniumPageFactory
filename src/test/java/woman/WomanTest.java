@@ -35,7 +35,6 @@ public class WomanTest extends ScriptBase {
         woman= new Woman(driver);
         woman.dressSearch(driver,"Casual Dresses");
 
-
     }
 
     @Test
