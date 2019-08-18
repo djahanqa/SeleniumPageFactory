@@ -25,7 +25,6 @@ public class Woman extends ScriptBase {
         tops.isDisplayed();
         mouseOverTop(driver.findElement(By.xpath("//*//a[@title='"+design+"']")),driver);
 
-
     }
     public  void dressSearch(WebDriver driver,String dress){
         title.click();
