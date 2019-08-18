@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
 
-import javax.swing.*;
 
 public class WomanCatalog extends ScriptBase {
 

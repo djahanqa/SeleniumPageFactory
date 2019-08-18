@@ -13,7 +13,8 @@ public class Woman extends ScriptBase {
     WebElement title;
     @FindBy(xpath = "//*[@id='block_top_menu']//a[@title='Tops']")
     WebElement tops;
-
+    @FindBy(xpath = "//*/ul/li[1]//a[@title='Dresses']")
+    WebElement dresses;
 
     public Woman(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -22,15 +23,29 @@ public class Woman extends ScriptBase {
     public void topssearch(WebDriver driver, String design) {
         title.click();
         tops.isDisplayed();
-        mouseOver(driver.findElement(By.xpath("//*//a[@title='"+design+"']")),driver);
+        mouseOverTop(driver.findElement(By.xpath("//*//a[@title='"+design+"']")),driver);
+
 
     }
+    public  void dressSearch(WebDriver driver,String dress){
+        title.click();
+        dresses.isDisplayed();
+        dresses.isDisplayed();
+        mouseOverDresses(driver.findElement(By.xpath("//*//li[1]//li//a[@title='" + dress + "']")),driver);
+    }
 
-    private void mouseOver(WebElement element,WebDriver driver) {
+    private void mouseOverTop(WebElement element,WebDriver driver) {
+
+        Actions action = new Actions(driver);
+        element = element;
+        action.moveToElement(element).perform();
+    }
+
+    private void mouseOverDresses(WebElement element,WebDriver driver) {
 
         Actions action = new Actions(driver);
         element = element;
         action.moveToElement(element).perform();
 
-}
+    }
 }
