@@ -27,21 +27,18 @@ public class WomanTest extends ScriptBase {
     public void verifyblouse() {
         woman= new Woman(driver);
         woman.topssearch(driver,"Blouses");
-
     }
 
     @Test
     public void verifybCasual() {
         woman= new Woman(driver);
         woman.dressSearch(driver,"Casual Dresses");
-
     }
 
     @Test
     public void verifyEvening() {
         woman= new Woman(driver);
         woman.dressSearch(driver,"Evening Dresses");
-
     }
 
     @Test
