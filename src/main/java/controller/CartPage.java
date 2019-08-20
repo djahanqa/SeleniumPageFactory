@@ -47,6 +47,5 @@ public class CartPage extends ScriptBase {
     addToCard.click();
 
 
-
     }
 }
