@@ -15,6 +15,13 @@ public class Woman extends ScriptBase {
     WebElement tops;
     @FindBy(xpath = "//*/ul/li[1]//a[@title='Dresses']")
     WebElement dresses;
+    @FindBy(css = "#block_top_menu > ul > li:nth-child(1) > a")
+
+
+    WebElement womenTab;
+    @FindBy(css = "#categories_block_left > h2")
+    WebElement womenFilterTab;
+
 
     public Woman(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -23,21 +30,38 @@ public class Woman extends ScriptBase {
     public void topssearch(WebDriver driver, String design) {
         title.click();
         tops.isDisplayed();
-        mouseOver(driver.findElement(By.xpath("//*//a[@title='"+design+"']")),driver);
+        mouseOver(driver.findElement(By.xpath("//*//a[@title='" + design + "']")), driver);
 
     }
-    public  void dressSearch(WebDriver driver,String dress){
+
+    public void dressSearch(WebDriver driver, String dress) {
         title.click();
         dresses.isDisplayed();
-        mouseOver(driver.findElement(By.xpath("//*//li[1]//li//a[@title='" + dress + "']")),driver);
+        mouseOver(driver.findElement(By.xpath("//*//li[1]//li//a[@title='" + dress + "']")), driver);
     }
 
-    private void mouseOver(WebElement element,WebDriver driver) {
+    private void mouseOver(WebElement element, WebDriver driver) {
 
         Actions action = new Actions(driver);
         element = element;
         action.moveToElement(element).perform();
 
+
+    }
+
+    public void womenCatalogeFilterTop(String filterCatagory, String dressCatagory, WebDriver driver) {
+        womenTab.click();
+        if (womenFilterTab.isDisplayed()) {
+            driver.findElement(By.xpath("//*[@id='categories_block_left']/div/ul/li/a[contains(text(),'" + filterCatagory + "')]")).click();
+
+            if (womenFilterTab.isDisplayed()) {
+                driver.findElement(By.xpath("//*[@id='categories_block_left']/div/ul/li/a[contains(text(),'" + dressCatagory + "')]")).isDisplayed();
+
+            } else {
+                System.out.println("Women Filter tab not found " + womenFilterTab);
+            }
+
+        } else System.out.println("Women Filter Tab not found " + womenFilterTab);
 
     }
 }

@@ -48,8 +48,37 @@ public class WomanTest extends ScriptBase {
 
     }
 
+@Test
+public void verifyWomenTshirt(){
+        woman=new Woman(driver);
+        woman.womenCatalogeFilterTop("Tops","T-shirts",driver);
 
-    @AfterTest
+        }
+    @Test
+    public void verifyWomenBlouse() {
+        woman = new Woman(driver);
+        woman.womenCatalogeFilterTop("Tops", "Blouses", driver);
+    }
+    @Test
+    public void verifyWomenCasualDress() {
+        woman = new Woman(driver);
+        woman.womenCatalogeFilterTop("Dresses", "Casual Dresses", driver);
+    }
+
+    @Test
+    public void verifyEveningDress() {
+        woman = new Woman(driver);
+        woman.womenCatalogeFilterTop("Dresses", "Evening Dresses", driver);
+    }
+
+
+    @Test
+    public void verifySummerDress() {
+        woman = new Woman(driver);
+        woman.womenCatalogeFilterTop("Dresses", "Summer Dresses", driver);
+
+    }
+        @AfterTest
     void closebrowser() {
 
 
