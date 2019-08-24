@@ -46,12 +46,21 @@ public class CartPageTest extends ScriptBase {
     public void verifycartPaymentBar() {
         cartPage = new CartPage(driver);
         cartPage.shoppingcart("Payment", driver);
-    }
-        @AfterTest
-        public void closebrowser() {
+
+        }
+
+        @Test
+    public void verifyfadedTshirt() throws InterruptedException {
+        cartPage = new CartPage(driver);
+        cartPage.itemAddedToShoppingCart(driver);
+
+
+        }
+
+
+public void closebrowser(){
 //            driver.close();
 //            driver.quit();
+
         }
-    }
-
-
+}
