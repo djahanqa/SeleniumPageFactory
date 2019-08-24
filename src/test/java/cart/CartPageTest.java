@@ -50,9 +50,10 @@ public class CartPageTest extends ScriptBase {
         }
 
         @Test
-    public void verifyfadedTshirt() {
+    public void verifyfadedTshirt() throws InterruptedException {
         cartPage = new CartPage(driver);
         cartPage.itemAddedToShoppingCart(driver);
+
 
         }
 

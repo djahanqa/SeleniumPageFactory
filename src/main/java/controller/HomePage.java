@@ -55,34 +55,35 @@ public class HomePage extends ScriptBase {
 
     }
 
-    public void seachspProducts(String products, WebDriver driver,String quantity){
+    public void seachspProducts(String products, WebDriver driver, String quantity) {
         Search.clear();
         Search.sendKeys(products);
         clickButton.click();
-        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'"+quantity+" results have been found.')]")).isDisplayed();
-
-    }
-    public void catagory(WebDriver driver,String Selectcatagory){
-
-        driver.findElement(By.xpath("//*[@id='block_top_menu']//li[1]/a[@title='"+Selectcatagory+"']")).isDisplayed();
+        driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'" + quantity + " results have been found.')]")).isDisplayed();
 
     }
 
-    public void searchByDemand(WebDriver driver,String demand) {
+    public void catagory(WebDriver driver, String Selectcatagory) {
+
+        driver.findElement(By.xpath("//*[@id='block_top_menu']//li[1]/a[@title='" + Selectcatagory + "']")).isDisplayed();
+
+    }
+
+    public void searchByDemand(WebDriver driver, String demand) {
         homepageNavigation.click();
         driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
 
 
     }
 
-    public void informationTree(WebDriver driver,String info){
+    public void informationTree(WebDriver driver, String info) {
 
-        driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='"+info+"']")).isDisplayed();
+        driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='" + info + "']")).isDisplayed();
 
 
     }
 
-    public void myaccount (WebDriver driver,String information) {
+    public void myaccount(WebDriver driver, String information) {
 
         driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='" + information + "']")).isDisplayed();
 
@@ -90,7 +91,7 @@ public class HomePage extends ScriptBase {
 
     public void customerService() {
         ContactUs1.click();
-        Assert.assertEquals(customerService,customerService);
+        Assert.assertEquals(customerService, customerService);
     }
 
 }

@@ -8,7 +8,11 @@ import org.testng.annotations.Test;
 
 public class ContactTest extends ScriptBase {
 
-    ContactPage contactPage = new ContactPage(driver);
+
+    ContactPage contactPage;
+
+
+
     @BeforeTest
     public void beforetest() {
         init();
