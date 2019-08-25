@@ -20,32 +20,32 @@ public class CartPageTest extends ScriptBase {
         @Test
         public void verifycartpage(){
             cartPage=new CartPage(driver);
-            cartPage.shoppingcart("Summary",driver);
+            cartPage.shoppincartsummary("Summary",driver);
         }
     @Test
     public void verifycartSiginBar() {
         cartPage = new CartPage(driver);
-        cartPage.shoppingcart(" Sign in",driver);
+        cartPage.shoppincartsummary(" Sign in",driver);
         }
 
     @Test
     public void verifycartAddressBar() {
         cartPage = new CartPage(driver);
-        cartPage.shoppingcart(" Address",driver);
+        cartPage.shoppincartsummary(" Address",driver);
 
     }
 
     @Test
-    public void verifycartShippingBar() {
+    public void verifycartShoppingBar() {
         cartPage = new CartPage(driver);
-        cartPage.shoppingcart("Shipping", driver);
+        cartPage.shoppincartsummary("Shipping", driver);
     }
 
 
     @Test
     public void verifycartPaymentBar() {
         cartPage = new CartPage(driver);
-        cartPage.shoppingcart("Payment", driver);
+        cartPage.shoppincartsummary("Payment", driver);
 
         }
 
@@ -57,10 +57,10 @@ public class CartPageTest extends ScriptBase {
 
         }
 
-
+@AfterTest
 public void closebrowser(){
-//            driver.close();
-//            driver.quit();
+            driver.close();
+            driver.quit();
 
         }
 }
