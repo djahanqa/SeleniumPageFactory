@@ -11,12 +11,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class CartPage extends ScriptBase {
-    @FindBy(css = "#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b")
+    @FindBy(xpath = "//a[@title='View my shopping cart']")
     WebElement cart;
     @FindBy(id = "cart_title")
     WebElement cartTitle;
-    @FindBy(css = "#center_column > p")
-    WebElement cartMessage;
+
+
     @FindBy(css = "#add_to_cart > button > span")
     WebElement addToCard;
     @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2 > i")
@@ -34,18 +34,17 @@ public class CartPage extends ScriptBase {
     public CartPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
+
+
     }
 
-    public void shoppingcart(String summary, WebDriver driver) {
+    public void shoppincartsummary(String bar,WebDriver driver) {
         cart.click();
         Assert.assertEquals(cartTitle, cartTitle);
-        shoppincartsummary(driver, summary);
+        driver.findElement(By.xpath("//*[@id='order_step'][contains(text(),'"+bar+"')]")).isDisplayed();
 
-    }
 
-    public void shoppincartsummary(WebDriver driver, String summary) {
-        driver.findElement(By.xpath("//span[contains(text(),'" + summary + "')]")).isDisplayed();
-        cartMessage.isDisplayed();
+
     }
 
     public void itemAddedToShoppingCart(WebDriver driver) throws InterruptedException {
