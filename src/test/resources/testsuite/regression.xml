@@ -37,6 +37,7 @@
                     <include name="invalidSignUpAccountVerify"/>
                 </methods>
             </class>
+
         </classes>
     </test>
 </suite>
