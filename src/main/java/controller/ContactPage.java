@@ -43,7 +43,6 @@ public void dropdown(WebElement element,String value){
         Select select=new Select(element);
         select.selectByVisibleText(value);
 }
-
     @FindBy(id ="email")
     WebElement emailaddress;
     @FindBy (id = "#id_order")
