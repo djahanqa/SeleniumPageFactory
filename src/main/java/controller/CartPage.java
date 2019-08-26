@@ -21,14 +21,17 @@ public class CartPage extends ScriptBase {
 
     @FindBy(css = "#add_to_cart > button > span")
     WebElement addToCard;
-    @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2 > i")
-    WebElement oneItemAdded;
+
    @FindBy (xpath = "//*//span[@title='Continue shopping']")
     WebElement continueshopping;
     @FindBy (css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > a > span > i")
     WebElement checkout;
-    @FindBy (xpath = "//*[@id='homefeatured']//h5[@itemprop='name']/a[@title='Faded Short Sleeve T-shirts']")
+
+
+     @FindBy(xpath = "//*[@id='homefeatured']//h5[@itemprop='name']/a[@title='Faded Short Sleeve T-shirts']")
     WebElement sleevTsirt;
+
+
     @FindBy (xpath = "//div/a[@title='View my shopping cart']")
     WebElement cartPageView;
 
