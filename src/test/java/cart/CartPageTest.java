@@ -58,8 +58,8 @@ public class CartPageTest extends ScriptBase {
 
 @AfterTest
 public void closebrowser(){
-//            driver.close();
-//            driver.quit();
+            driver.close();
+            driver.quit();
 
         }
 }
