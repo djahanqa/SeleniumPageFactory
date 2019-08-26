@@ -10,9 +10,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+
+
 public class CartPage extends ScriptBase {
-    @FindBy(xpath = "//a[@title='View my shopping cart']")
-    WebElement cart;
+    @FindBy(xpath = "//*//a[@title='View my shopping cart']")
+    WebElement shoppingcart;
     @FindBy(id = "cart_title")
     WebElement cartTitle;
 
@@ -35,18 +37,14 @@ public class CartPage extends ScriptBase {
 
         PageFactory.initElements(driver, this);
 
-
     }
 
-    public void shoppincartsummary(String bar,WebDriver driver) {
-        cart.click();
+    public void shoppingCartSummery(String bar,WebDriver driver) {
+        shoppingcart.click();
         Assert.assertEquals(cartTitle, cartTitle);
-        driver.findElement(By.xpath("//*[@id='order_step'][contains(text(),'"+bar+"')]")).isDisplayed();
-
-
+        driver.findElement(By.xpath("//*[@class='"+bar+"']")).isDisplayed();
 
     }
-
     public void itemAddedToShoppingCart(WebDriver driver) throws InterruptedException {
         mouseOver(sleevTsirt, driver);
         sleevTsirt.click();
