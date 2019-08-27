@@ -23,6 +23,24 @@ public class AddtoCartPage extends ScriptBase {
     WebElement proceedToCheckout;
     @FindBy (xpath = "//*[@id='columns']//span[@class='navigation_page']")
     WebElement authentication;
+    @FindBy(id="email")
+    WebElement email;
+    @FindBy(id="passwd")
+    WebElement password;
+    @FindBy(xpath = "//*[@id='SubmitLogin'][@id='SubmitLogin']")
+    WebElement signIn;
+    @FindBy(name ="processAddress")
+    WebElement proceed;
+
+    @FindBy (id="cgv")
+    WebElement agreeToTerms;
+
+    @FindBy (xpath = "//*[@id='form']/p/button[@name='processCarrier']")
+    WebElement processCarrier;
+
+
+
+
 
     public AddtoCartPage(WebDriver driver) {
 
@@ -31,7 +49,7 @@ public class AddtoCartPage extends ScriptBase {
 
     }
 
-    public void addItemToCart(WebDriver driver)throws InterruptedException {
+    public void addItemToCart(WebDriver driver,String emailAddress,String pass)throws InterruptedException {
         mouseOver(blouse,driver);
         addToCart.click();
         Thread.sleep(5000);
@@ -41,6 +59,16 @@ public class AddtoCartPage extends ScriptBase {
         checkout.click();
         proceedToCheckout.click();
         Assert.assertEquals(authentication,authentication);
+        email.sendKeys(emailAddress);
+        password.sendKeys(pass);
+        signIn.click();
+        Thread.sleep(5000);
+        proceed.click();
+        agreeToTerms.click();
+        Thread.sleep(5000);
+        processCarrier.click();
+
+
     }
 
 
