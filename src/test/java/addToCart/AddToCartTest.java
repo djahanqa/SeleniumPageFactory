@@ -19,7 +19,8 @@ public class AddToCartTest extends ScriptBase {
 
 public void verifyAddItemToCart()throws InterruptedException{
         addtoCartPage=new AddtoCartPage(driver);
-        addtoCartPage.addItemToCart(driver);
+        addtoCartPage.addItemToCart(driver,"futureitgroup@gmail.com","admin123");
+
 }
 
 @AfterTest
