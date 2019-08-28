@@ -17,15 +17,15 @@ public class MultipleItemAddedTest extends ScriptBase {
 
 
     @Test
-    public void verifycartpage(){
+    public void verifycartpage()throws InterruptedException{
         multipleItemAddedPage = new MultipleItemAddedPage(driver);
         multipleItemAddedPage.itemAdded(driver);
 
     }
     @AfterTest
     public void closebrowser(){
-        driver.close();
-        driver.quit();
+//        driver.close();
+//        driver.quit();
 
     }
 
