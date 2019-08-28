@@ -1,13 +1,13 @@
-package addToCart;
+package OneItemAddToCart;
 
 import base.ScriptBase;
-import controller.AddtoCartPage;
+import controller.OneItemAddedToCartPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class AddToCartTest extends ScriptBase {
-    AddtoCartPage addtoCartPage;
+public class OneItemAddToCartTest extends ScriptBase {
+    OneItemAddedToCartPage oneItemAddedtoCartPage;
 
 
     @BeforeTest
@@ -18,8 +18,8 @@ public class AddToCartTest extends ScriptBase {
 @Test
 
 public void verifyAddItemToCart()throws InterruptedException{
-        addtoCartPage=new AddtoCartPage(driver);
-        addtoCartPage.addItemToCart(driver,"futureitgroup@gmail.com","admin123");
+        oneItemAddedtoCartPage =new OneItemAddedToCartPage(driver);
+        oneItemAddedtoCartPage.addItemToCart(driver,"futureitgroup@gmail.com","admin123");
 
 }
 
