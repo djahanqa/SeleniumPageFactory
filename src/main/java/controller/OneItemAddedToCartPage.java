@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class AddtoCartPage extends ScriptBase {
+public class OneItemAddedToCartPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='homefeatured']//a/img[@title='Blouse']")
     WebElement blouse;
     @FindBy(xpath = "//*[@id='homefeatured']/li[2]//a[@title='Add to cart']")
@@ -40,12 +40,9 @@ public class AddtoCartPage extends ScriptBase {
 
 
 
-
-
-    public AddtoCartPage(WebDriver driver) {
+    public OneItemAddedToCartPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
-
 
     }
 
