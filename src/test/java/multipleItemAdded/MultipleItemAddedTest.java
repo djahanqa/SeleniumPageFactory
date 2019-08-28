@@ -21,7 +21,6 @@ public class MultipleItemAddedTest extends ScriptBase {
         multipleItemAddedPage = new MultipleItemAddedPage(driver);
         multipleItemAddedPage.itemAdded(driver);
 
-
     }
     @AfterTest
     public void closebrowser(){
