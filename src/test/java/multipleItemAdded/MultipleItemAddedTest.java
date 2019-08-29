@@ -22,6 +22,54 @@ public class MultipleItemAddedTest extends ScriptBase {
         multipleItemAddedPage.itemAdded(driver);
 
     }
+
+    @Test
+
+    public void verifyQuanity(){
+        multipleItemAddedPage =new MultipleItemAddedPage(driver);
+        multipleItemAddedPage.changeQuantity(driver);
+    }
+
+    @Test
+
+    public void verifyChangeSize(){
+        multipleItemAddedPage =new MultipleItemAddedPage(driver);
+        multipleItemAddedPage.changeSize(driver);
+
+    }
+
+    @Test
+
+    public void verifyfadedTshirt()throws InterruptedException {
+        multipleItemAddedPage = new MultipleItemAddedPage(driver);
+        multipleItemAddedPage.multipleItemAdded("Faded Short Sleeve T-shirts", driver);
+    }
+
+    @Test
+
+    public void verifyBlouse()throws InterruptedException {
+            multipleItemAddedPage = new MultipleItemAddedPage(driver);
+            multipleItemAddedPage.multipleItemAdded("Blouse", driver);
+    }
+
+    @Test
+
+    public void verifyPrintedDressOne()throws InterruptedException{
+
+        multipleItemAddedPage =new MultipleItemAddedPage(driver);
+        multipleItemAddedPage.multipleItemAdded("Printed Dress",driver);
+
+    }
+
+    @Test
+
+    public void verifyPrintedDressTwo()throws InterruptedException{
+
+        multipleItemAddedPage =new MultipleItemAddedPage(driver);
+        multipleItemAddedPage.multipleItemAdded("Printed Dress",driver);
+
+    }
+
     @AfterTest
     public void closebrowser(){
 //        driver.close();
