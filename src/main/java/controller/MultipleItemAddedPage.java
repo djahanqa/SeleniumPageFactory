@@ -9,8 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-import javax.xml.xpath.XPath;
 
 public class MultipleItemAddedPage extends ScriptBase {
 
@@ -39,7 +39,7 @@ public class MultipleItemAddedPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='homefeatured']/li[3]/div/div[2]//a[@title='Printed Dress']")
     WebElement printedDress;
 
-    @FindBy(css = "#quantity_wanted_p > a.btn.btn-default.button-plus.product_quantity_up > span")
+    @FindBy(css = "#//*[@id='quantity_wanted_p']//span/i[@class='icon-plus']")
     WebElement quantity;
 
     @FindBy(id = "group_1")
@@ -49,9 +49,12 @@ public class MultipleItemAddedPage extends ScriptBase {
     public MultipleItemAddedPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
-    }
 
+
+    }
     public void itemAdded(WebDriver driver) throws InterruptedException {
+        homepage.click();
+        Thread.sleep(5000);
         mouseOver(fadedTshirt, driver);
         fadedTshirt.click();
         addtocart.click();
@@ -69,28 +72,24 @@ public class MultipleItemAddedPage extends ScriptBase {
 
 
     }
-    public void changeQuantity(WebDriver driver) {
+    public void changeQuantity(WebDriver driver) throws InterruptedException {
+        homepage.click();
         mouseOver(printedDress, driver);
         printedDress.click();
-        quantity.click();
+        Thread.sleep(5000);
+        looptest(driver);
+        //Assert.assertEquals(quantity,quantity);
 
     }
 
     public void changeSize(WebDriver driver) {
+        homepage.click();
         mouseOver(printedDress, driver);
         printedDress.click();
         dropdown(size, "M");
     }
 
-    public void multipleItemAdded(String products, WebDriver driver)throws InterruptedException {
 
-        mouseOver(driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")), driver);
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")).click();
-        Thread.sleep(5000);
-        homepage.click();
-
-        }
 
     public void dropdown(WebElement element,String value){
         element=size;
@@ -104,4 +103,10 @@ public class MultipleItemAddedPage extends ScriptBase {
 
 
     }
+
+    public void looptest(WebDriver driver){
+        for(int i=0; i<9; i++)
+            driver.findElement(By.xpath("//*[@id='quantity_wanted_p']//span/i[@class='icon-plus']")).click();}
+
+
 }
