@@ -55,8 +55,9 @@ public class CartPage extends ScriptBase {
         Thread.sleep(5000);
         continueshopping.click();
         mouseOver(cartPageView,driver);
-        checkout.isDisplayed();
-
+        checkout.click();
+        looptest();
+        Assert.assertEquals("","");
     }
 
     public void mouseOver(WebElement element, WebDriver driver) {
@@ -66,4 +67,9 @@ public class CartPage extends ScriptBase {
 
 
     }
+
+    public void looptest(){
+        for(int i=0; i<0; i++)
+       driver.findElement(By.xpath("")).click();}
+
 }
