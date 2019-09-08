@@ -29,7 +29,7 @@ WebElement home;
         homepage.click();
         driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='"+products+"']")).click();
 
-}
+    }
 
     public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
@@ -42,4 +42,4 @@ WebElement home;
         Select select=new Select(element);
         select.selectByVisibleText(value);
     }
-}
+    }
