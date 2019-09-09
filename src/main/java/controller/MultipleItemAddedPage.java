@@ -95,8 +95,8 @@ public class MultipleItemAddedPage extends ScriptBase {
         element=size;
         Select select=new Select(element);
         select.selectByVisibleText(value);
-}
-        public void mouseOver(WebElement element, WebDriver driver) {
+    }
+    public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         element = element;
         action.moveToElement(element).perform();
