@@ -1,7 +1,6 @@
 package multipleItem;
 
 import base.ScriptBase;
-import controller.MultipleItemAddedPage;
 import controller.MultipleItemPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -20,14 +19,14 @@ public class MultipleItemTest extends ScriptBase {
 
         public void verifyfadedTshirt() throws InterruptedException {
                 multipleItemPage = new MultipleItemPage(driver);
-                multipleItemPage.multipleItemAdded("Faded Short Sleeve T-shirts", "M", driver);
+                multipleItemPage.multipleItemAdded("Faded Short Sleeve T-shirts", driver);
         }
 
         @Test
 
         public void verifyBlouse() throws InterruptedException {
                 multipleItemPage = new MultipleItemPage(driver);
-                multipleItemPage.multipleItemAdded("Blouse", "S", driver);
+                multipleItemPage.multipleItemAdded("Blouse", driver);
         }
 
         @Test
@@ -35,7 +34,7 @@ public class MultipleItemTest extends ScriptBase {
         public void verifyPrintedDressOne() throws InterruptedException {
 
                 multipleItemPage = new MultipleItemPage(driver);
-                multipleItemPage.multipleItemAdded("Printed Dress", "L", driver);
+                multipleItemPage.multipleItemAdded("Printed Dress", driver);
 
         }
 
@@ -44,7 +43,7 @@ public class MultipleItemTest extends ScriptBase {
         public void verifyPrintedSummerDress() throws InterruptedException {
 
                 multipleItemPage = new MultipleItemPage(driver);
-                multipleItemPage.multipleItemAdded("Printed Summer Dress", "L", driver);
+                multipleItemPage.multipleItemAdded("Printed Summer Dress", driver);
         }
 
 
@@ -53,7 +52,7 @@ public class MultipleItemTest extends ScriptBase {
         public void verifyPrintedChiffon() throws InterruptedException {
 
                 multipleItemPage = new MultipleItemPage(driver);
-                multipleItemPage.multipleItemAdded("Printed Chiffon Dress", "S", driver);
+                multipleItemPage.multipleItemAdded("Printed Chiffon Dress", driver);
 
         }
 

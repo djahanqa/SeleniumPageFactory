@@ -11,7 +11,7 @@ public class CotactTest extends ScriptBase {
 
         @BeforeTest
         public void beforetest() {
-            init();
+
         }
 
         @Test
