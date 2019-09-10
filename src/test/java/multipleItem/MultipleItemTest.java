@@ -62,10 +62,10 @@ public class MultipleItemTest extends ScriptBase {
                 multipleItemPage =new MultipleItemPage(driver);
                 multipleItemPage.changeQuantity(driver,"Faded Short Sleeve T-shirts",6);
         }
-@AfterTest
-public void closebrowser(){
-//        driver.close();
-//        driver.quit();
+        @AfterTest
+        public void closebrowser(){
+        driver.close();
+        driver.quit();
 
         }
 

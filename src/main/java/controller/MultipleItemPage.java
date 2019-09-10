@@ -51,32 +51,17 @@ public class MultipleItemPage extends ScriptBase {
     public void changeQuantity(WebDriver driver,String products, int quantity) throws InterruptedException {
         homepage.click();
         Thread.sleep(5000);
-//        addcartproduct(driver,addProduct);
-//        Thread.sleep(5000);
+
 
         multipleItemAdded(products, driver);
         Thread.sleep(5000);
        productQuantity(addingItems,quantity);
 
-
-
-//
-//    public  void addcartproduct( WebDriver driver,String Product){
-//        driver.findElement(By.xpath("//*[@id='homefeatured']/li//h5/a[@title='"+Product+"']")).click();
-
     }
 
     private void productQuantity(WebElement element, int quantity) {
-        for(int i=0; i<quantity; i++) {
+        for (int i = 0; i < quantity; i++) {
             element.click();
         }
-        //driver.findElement(By.xpath("//*[@id='quantity_wanted'][@id='"+quantity+"']")).click();
-        //driver.findElement(By.xpath("//*[@id='quantity_wanted_p']//span/i[@class='"+quantity+"']")).sendKeys();}
-
-}}
-
-
-//    public void productQuantity (WebElement element, int quantity){
-//        for(int i=0; i<quantity; i++) element.sendKeys();
-//            driver.findElement(By.xpath("//*[@id='quantity_wanted'][@id='"+quantity+"']")).sendKeys();
-//            //driver.findElement(By.xpath("//*[@id='quantity_wanted_p']//span/i[@class='"+quantity+"']")).click();
+    }
+}
