@@ -72,7 +72,7 @@ public class MultipleItemTest extends ScriptBase {
 
         }
 
-        @AfterTest
+                @AfterTest
         public void closebrowser(){
 //        driver.close();
 //        driver.quit();
