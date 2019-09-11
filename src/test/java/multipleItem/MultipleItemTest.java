@@ -1,6 +1,7 @@
 package multipleItem;
 
 import base.ScriptBase;
+import controller.MultipleItemAddedPage;
 import controller.MultipleItemPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -62,10 +63,19 @@ public class MultipleItemTest extends ScriptBase {
                 multipleItemPage =new MultipleItemPage(driver);
                 multipleItemPage.changeQuantity(driver,"Faded Short Sleeve T-shirts",6);
         }
+
+        @Test
+
+        public void verifyChangeSize() throws InterruptedException {
+                multipleItemPage =new MultipleItemPage(driver);
+                multipleItemPage.changeSize(driver,"Printed Dress",2,"M");
+
+        }
+
         @AfterTest
         public void closebrowser(){
-        driver.close();
-        driver.quit();
+//        driver.close();
+//        driver.quit();
 
         }
 
