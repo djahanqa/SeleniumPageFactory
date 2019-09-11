@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/dilrubajahan/Documents/SeleniumPagefactoryFramework">
         <classes>
-            <class name="homepage.HomePageTest">
+            <class name="homepageeTest.HomePageeTest">
                 <methods>
                     <include name="verifyHomePage"/>
                     <include name="searchSleeveQuantity"/>

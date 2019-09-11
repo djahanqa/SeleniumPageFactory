@@ -24,6 +24,9 @@ public class MultipleItemPage extends ScriptBase {
     @FindBy(xpath = "//*[@id='homefeatured']/li[3]/div/div[2]//a[@title='Printed Dress']")
     WebElement printedDress;
 
+    @FindBy(xpath = "//*/button[@name='Submit']")
+    WebElement addToCart;
+
 
     public MultipleItemPage(WebDriver driver) {
 
@@ -48,6 +51,7 @@ public class MultipleItemPage extends ScriptBase {
         multipleItemAdded(products,driver);
         productQuantity(addingItems,quantity);
         dropdown(size,sizes);
+        addToCart.click();
 
     }
     public void changeQuantity(WebDriver driver,String products, int quantity) throws InterruptedException {
@@ -56,6 +60,7 @@ public class MultipleItemPage extends ScriptBase {
         multipleItemAdded(products, driver);
         Thread.sleep(5000);
        productQuantity(addingItems,quantity);
+       addToCart.click();
 
     }
 public void changeDressSize(WebDriver driver,String sizes){
