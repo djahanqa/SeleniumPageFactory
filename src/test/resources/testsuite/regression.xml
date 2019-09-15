@@ -37,7 +37,83 @@
                     <include name="invalidSignUpAccountVerify"/>
                 </methods>
             </class>
+            <class name="cart.CartPageTest">
+                <methods>
+                    <include name="verifycartpage"/>
+                    <include name="verifycartSiginBar"/>
+                    <include name="verifycartAddressBar"/>
+                    <include name="verifycartShoppingBar"/>
+                    <include name="verifycartPaymentBar"/>
+                    <include name="verifycartpage"/>
+                    <include name="verifyfadedTshirt"/>
+                </methods>
+            </class>
+            <class name="contact.ContactTest">
+                <methods>
+                    <include name="varifyMessageSen"/>
+                    <include name="varifySendAMessage"/>
+                </methods>
+            </class>
+            <class name="multipleItem.MultipleItemTest">
+                <methods>
+                    <include name="verifyfadedTshirt"/>
+                    <include name="verifyBlouse"/>
+                    <include name="verifyPrintedDressOne"/>
+                    <include name="verifyPrintedSummerDress"/>
+                    <include name="verifyPrintedChiffon"/>
+                    <include name="verifyQuanity"/>
+                    <include name="verifyChangeSize"/>
+                    <include name="verifyChangeSize2"/>
 
+                </methods>
+
+            </class>
+            <class name="multipleItemAdded.MultipleItemAddedTest">
+                <methods>
+                    <include name="verifycartpage"/>
+                    <include name="verifyQuanity"/>
+                    <include name="verifyChangeSize"/>
+                </methods>
+            </class>
+            <class name="OneItemAddToCart.OneItemAddToCartTest">
+                <methods>
+                    <include name="verifyAddItemToCa"/>
+                </methods>
+            </class>
+            <class name="social.socialMediaTest">
+                <methods>
+                    <include name="verifyfacebook"/>
+                    <include name="verifytwitter"/>
+                    <include name="verifyyoutube"/>
+                    <include name="verifygoogle"/>
+
+                </methods>
+
+            </class>
+            <class name="woman.WomanTest">
+                <methods>
+                    <include name="verifyTshirt"/>
+                    <include name="verifyblouse"/>
+                    <include name="verifybCasual"/>
+                    <include name="verifyEvening"/>
+                    <include name="verifySummer"/>
+                    <include name="verifyWomenTshirt"/>
+                    <include name="verifyWomenBlouse"/>
+                    <include name="verifyWomenCasualDress"/>
+                    <include name="verifyEveningDress"/>
+                    <include name="verifySummerDress"/>
+
+
+                </methods>
+            </class>
+            <class name="womencatalog.WomanCatalogTest">
+                <methods>
+                    <include name="verifyWomancatalog"/>
+                    <include name="verifyDresscatalog"/>
+                    <include name="verifyTshirtcatalog"/>
+
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

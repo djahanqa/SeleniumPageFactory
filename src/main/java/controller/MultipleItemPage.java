@@ -8,8 +8,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import java.util.logging.Logger;
 
 public class MultipleItemPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(MultipleItemPage .class.getName());
+
     @FindBy(xpath = "//*[@id='header_logo']/a/img[@class='logo img-responsive']")
     WebElement homepage;
     @FindBy(xpath = "//*[@class='form-control attribute_select no-print']")
@@ -27,6 +32,8 @@ public class MultipleItemPage extends ScriptBase {
     @FindBy(xpath = "//*/button[@name='Submit']")
     WebElement addToCart;
 
+    @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_product.col-xs-12.col-md-6 > h2")
+    WebElement successfullyAdded;
 
     public MultipleItemPage(WebDriver driver) {
 
@@ -35,11 +42,12 @@ public class MultipleItemPage extends ScriptBase {
 
     public void multipleItemAdded(String products, WebDriver driver) throws InterruptedException {
         homepage.click();
+        log.info("Home Page Button Clicked:"+homepage.toString());
         mouseOver(driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")), driver);
         Thread.sleep(5000);
-
+        log.info("mouseOver happen:");
        driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")).click();
-
+        log.info("product added");
 
     }
 
@@ -52,6 +60,7 @@ public class MultipleItemPage extends ScriptBase {
         productQuantity(addingItems,quantity);
         dropdown(size,sizes);
         addToCart.click();
+        Assert.assertEquals(successfullyAdded,successfullyAdded);
 
     }
     public void changeQuantity(WebDriver driver,String products, int quantity) throws InterruptedException {
@@ -61,13 +70,13 @@ public class MultipleItemPage extends ScriptBase {
         Thread.sleep(5000);
        productQuantity(addingItems,quantity);
        addToCart.click();
+        Assert.assertEquals(successfullyAdded,successfullyAdded);
 
     }
 public void changeDressSize(WebDriver driver,String sizes){
         driver.findElement(By.xpath("//*[@class='"+sizes+"']")).isSelected();
 
 }
-
     public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         element = element;
