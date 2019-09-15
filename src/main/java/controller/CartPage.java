@@ -35,20 +35,17 @@ public class CartPage extends ScriptBase {
     @FindBy (xpath = "//div/a[@title='View my shopping cart']")
     WebElement cartPageView;
 
+    @FindBy(xpath = "//*[@id='header_logo']/a/img[@class='logo img-responsive']")
+    WebElement homepage;
+
 
     public CartPage(WebDriver driver) {
 
         PageFactory.initElements(driver, this);
 
     }
-
-    public void shoppingCartSummery(String bar,WebDriver driver) {
-        shoppingcart.click();
-        Assert.assertEquals(cartTitle, cartTitle);
-        driver.findElement(By.xpath("//*[@class='"+bar+"']")).isDisplayed();
-
-    }
     public void itemAddedToShoppingCart(WebDriver driver) throws InterruptedException {
+        homepage.click();
         mouseOver(sleevTsirt, driver);
         sleevTsirt.click();
         addToCard.click();
@@ -59,7 +56,12 @@ public class CartPage extends ScriptBase {
         looptest();
         Assert.assertEquals("","");
     }
+    public void shoppingCartSummery(String bar,WebDriver driver) {
+        shoppingcart.click();
+        Assert.assertEquals(cartTitle, cartTitle);
+        driver.findElement(By.xpath("//*[@class='"+bar+"']")).isDisplayed();
 
+    }
     public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         element = element;

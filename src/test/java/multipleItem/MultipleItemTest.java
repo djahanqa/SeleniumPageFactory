@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class MultipleItemTest extends ScriptBase {
+
         MultipleItemPage multipleItemPage;
 
 
@@ -69,6 +70,11 @@ public class MultipleItemTest extends ScriptBase {
         public void verifyChangeSize() throws InterruptedException {
                 multipleItemPage =new MultipleItemPage(driver);
                 multipleItemPage.changeSize(driver,"Printed Dress",2,"M");
+
+        }
+        public void verifyChangeSize2() throws InterruptedException {
+                multipleItemPage =new MultipleItemPage(driver);
+                multipleItemPage.changeSize(driver,"Printed Dress",2,"S");
 
         }
 
