@@ -2,17 +2,18 @@ package controller;
 
 import base.ScriptBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+
+import java.util.logging.Logger;
 
 
 public class MultipleItemAddedPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(MultipleItemAddedPage .class.getName());
 
     @FindBy(xpath = "//*[@id='homefeatured']/li[1]//h5[@itemprop='name']")
     WebElement fadedTshirt;

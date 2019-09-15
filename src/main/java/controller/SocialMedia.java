@@ -6,7 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class SocialMedia extends ScriptBase {
+    public static final Logger log=Logger.getLogger(SocialMedia .class.getName());
 
     public SocialMedia(WebDriver driver) {
         PageFactory.initElements(driver, this);

@@ -7,8 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class LoginPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(LoginPage .class.getName());
     @FindBy(xpath ="//a[@class='login']") WebElement signinButton;
     @FindBy(id = "email") WebElement emailSendKey;
     @FindBy(id = "passwd") WebElement passwordSendKey;

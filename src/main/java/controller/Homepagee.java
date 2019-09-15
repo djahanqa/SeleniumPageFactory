@@ -8,9 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class Homepagee extends ScriptBase {
-
-
+    public static final Logger log=Logger.getLogger(Homepagee .class.getName());
 
         @FindBy(css = "#header > div.nav > div > div > nav > span")
         WebElement CallUs;

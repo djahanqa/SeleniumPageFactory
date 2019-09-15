@@ -10,9 +10,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
 
 
 public class CartPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(CartPage .class.getName());
+
     @FindBy(xpath = "//*//a[@title='View my shopping cart']")
     WebElement shoppingcart;
     @FindBy(id = "cart_title")
@@ -46,20 +49,31 @@ public class CartPage extends ScriptBase {
     }
     public void itemAddedToShoppingCart(WebDriver driver) throws InterruptedException {
         homepage.click();
+        log.info("Home Page Button Clicked:"+homepage.toString());
         mouseOver(sleevTsirt, driver);
+        log.info("mouseOver on sleeve t-shirt:");
         sleevTsirt.click();
+        log.info("Clicked on Sleeve t-shirt:"+sleevTsirt.toString());
         addToCard.click();
+        log.info("product added");
         Thread.sleep(5000);
         continueshopping.click();
+        log.info("Cliked on Contuntinue shopping:"+continueshopping.toString());
         mouseOver(cartPageView,driver);
+        log.info("mouseOver on cart view page:");
         checkout.click();
+        log.info("clicked on check out:"+checkout.toString());
         looptest();
+        log.info("looptest");
         Assert.assertEquals("","");
     }
     public void shoppingCartSummery(String bar,WebDriver driver) {
         shoppingcart.click();
+        log.info("clicked on shoppoing cart:"+shoppingcart.toString());
         Assert.assertEquals(cartTitle, cartTitle);
+        log.info("Print actual and expected result cart title ");
         driver.findElement(By.xpath("//*[@class='"+bar+"']")).isDisplayed();
+
 
     }
     public void mouseOver(WebElement element, WebDriver driver) {
