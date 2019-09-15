@@ -7,8 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.logging.Logger;
+
 
 public class WomanCatalog extends ScriptBase {
+    public static final Logger log=Logger.getLogger(WomanCatalog .class.getName());
 
 
     public WomanCatalog(WebDriver driver) {

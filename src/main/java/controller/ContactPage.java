@@ -9,7 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class ContactPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(ContactPage .class.getName());
 
     @FindBy(css = "#contact-link > a")
     WebElement contactUs1;
@@ -24,6 +27,16 @@ public class ContactPage extends ScriptBase {
     WebElement orderReference;
     @FindBy(id="message")
     WebElement message;
+    @FindBy(id ="email")
+    WebElement emailaddress;
+    @FindBy (id = "#id_order")
+    WebElement oderReference;
+    @FindBy(id="message")
+    WebElement messageentered;
+    @FindBy (css = "submitMessage")
+    WebElement clickSend;
+    @FindBy(css = "#center_column > div > p")
+    WebElement oneErrorfound;
 
 
     public ContactPage(WebDriver driver) { PageFactory.initElements(driver,this);
@@ -43,16 +56,6 @@ public void dropdown(WebElement element,String value){
         Select select=new Select(element);
         select.selectByVisibleText(value);
 }
-    @FindBy(id ="email")
-    WebElement emailaddress;
-    @FindBy (id = "#id_order")
-    WebElement oderReference;
-    @FindBy(id="message")
-    WebElement messageentered;
-    @FindBy (css = "submitMessage")
-    WebElement clickSend;
-    @FindBy(css = "#center_column > div > p")
-    WebElement oneErrorfound;
 
 
     public void customerService() {

@@ -8,7 +8,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.logging.Logger;
+
 public class Woman extends ScriptBase {
+    public static final Logger log=Logger.getLogger(Woman .class.getName());
     @FindBy(xpath = "//*//a[@title='Women']")
     WebElement title;
     @FindBy(xpath = "//*[@id='block_top_menu']//a[@title='Tops']")

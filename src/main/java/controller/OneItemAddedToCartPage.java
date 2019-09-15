@@ -8,7 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.logging.Logger;
+
 public class OneItemAddedToCartPage extends ScriptBase {
+    public static final Logger log=Logger.getLogger(OneItemAddedToCartPage .class.getName());
     @FindBy(xpath = "//*[@id='homefeatured']//a/img[@title='Blouse']")
     WebElement blouse;
     @FindBy(xpath = "//*[@id='homefeatured']/li[2]//a[@title='Add to cart']")

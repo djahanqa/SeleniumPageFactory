@@ -45,39 +45,50 @@ public class MultipleItemPage extends ScriptBase {
         log.info("Home Page Button Clicked:"+homepage.toString());
         mouseOver(driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")), driver);
         Thread.sleep(5000);
-        log.info("mouseOver happen:");
-       driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")).click();
+        log.info("mouseOver happened:");
+        driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")).click();
         log.info("product added");
 
     }
 
     public void changeSize(WebDriver driver,String products, int quantity,String sizes) throws InterruptedException {
         homepage.click();
+        log.info("Home Page Button Clicked:"+homepage.toString());
         mouseOver(printedDress, driver);
         Thread.sleep(5000);
+        log.info("MouseOver happened ");
         printedDress.click();
+        log.info("Printed Dress Clicked:"+printedDress.toString());
         multipleItemAdded(products,driver);
+        log.info("multiple Item Added to cart:");
         productQuantity(addingItems,quantity);
+        log.info("Products Quantity Added to cart");
         dropdown(size,sizes);
+        log.info("Dropdwon and select the desired size");
         addToCart.click();
+        log.info("Iteam added to the cart");
         Assert.assertEquals(successfullyAdded,successfullyAdded);
 
     }
     public void changeQuantity(WebDriver driver,String products, int quantity) throws InterruptedException {
         homepage.click();
+        log.info("Home Page Button Clicked:"+homepage.toString());
         Thread.sleep(5000);
         multipleItemAdded(products, driver);
+        log.info("multiple Item Added to cart:");
         Thread.sleep(5000);
-       productQuantity(addingItems,quantity);
-       addToCart.click();
+        productQuantity(addingItems,quantity);
+        log.info("Products Quantity Added to cart");
+        addToCart.click();
+        log.info("Iteam added to the cart");
         Assert.assertEquals(successfullyAdded,successfullyAdded);
 
     }
-public void changeDressSize(WebDriver driver,String sizes){
+    public void changeDressSize(WebDriver driver,String sizes){
         driver.findElement(By.xpath("//*[@class='"+sizes+"']")).isSelected();
 
 }
-    public void mouseOver(WebElement element, WebDriver driver) {
+        public void mouseOver(WebElement element, WebDriver driver) {
         Actions action = new Actions(driver);
         element = element;
         action.moveToElement(element).perform();
