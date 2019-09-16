@@ -51,15 +51,23 @@ public class OneItemAddedToCartPage extends ScriptBase {
 
     public void addItemToCart(WebDriver driver,String emailAddress,String pass)throws InterruptedException {
         mouseOver(blouse,driver);
+        log.info("Mouse over on blouse");
         addToCart.click();
+        log.info("Clicked on add to cart");
         Thread.sleep(5000);
         continueShopping.click();
+        log.info("clicked on continue shopping");
         mouseOver(cart,driver);
+        log.info("mouse over on cart");
         Thread.sleep(5000);
         checkout.click();
+        log.info("Clicked on check out");
         proceedToCheckout.click();
+        log.info("Clicked on proceed to Check out");
         Assert.assertEquals(authentication,authentication);
+        log.info("");
         email.sendKeys(emailAddress);
+        log.info("Email address inout");
         password.sendKeys(pass);
         signIn.click();
         Thread.sleep(5000);

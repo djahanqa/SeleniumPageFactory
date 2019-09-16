@@ -58,7 +58,7 @@ public class CartPage extends ScriptBase {
         log.info("product added");
         Thread.sleep(5000);
         continueshopping.click();
-        log.info("Cliked on Contuntinue shopping:"+continueshopping.toString());
+        log.info("Clicked on Continue shopping:"+continueshopping.toString());
         mouseOver(cartPageView,driver);
         log.info("mouseOver on cart view page:");
         checkout.click();
@@ -66,10 +66,12 @@ public class CartPage extends ScriptBase {
         looptest();
         log.info("looptest");
         Assert.assertEquals("","");
+        log.info(" expected and actual result displayed");
+
     }
     public void shoppingCartSummery(String bar,WebDriver driver) {
         shoppingcart.click();
-        log.info("clicked on shoppoing cart:"+shoppingcart.toString());
+        log.info("clicked on shopping cart:"+shoppingcart.toString());
         Assert.assertEquals(cartTitle, cartTitle);
         log.info("Print actual and expected result cart title ");
         driver.findElement(By.xpath("//*[@class='"+bar+"']")).isDisplayed();

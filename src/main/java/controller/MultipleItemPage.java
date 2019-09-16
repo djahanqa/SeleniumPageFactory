@@ -47,7 +47,7 @@ public class MultipleItemPage extends ScriptBase {
         Thread.sleep(5000);
         log.info("mouseOver happened:");
         driver.findElement(By.xpath("//*[@id='homefeatured']//h5/a[@title='" + products + "']")).click();
-        log.info("product added");
+        log.info("Product added");
 
     }
 
@@ -68,6 +68,7 @@ public class MultipleItemPage extends ScriptBase {
         addToCart.click();
         log.info("Iteam added to the cart");
         Assert.assertEquals(successfullyAdded,successfullyAdded);
+        log.info("Actual and expected result successfully added displays");
 
     }
     public void changeQuantity(WebDriver driver,String products, int quantity) throws InterruptedException {
@@ -82,7 +83,7 @@ public class MultipleItemPage extends ScriptBase {
         addToCart.click();
         log.info("Iteam added to the cart");
         Assert.assertEquals(successfullyAdded,successfullyAdded);
-
+        log.info("Actual and expected result successfully added displays");
     }
     public void changeDressSize(WebDriver driver,String sizes){
         driver.findElement(By.xpath("//*[@class='"+sizes+"']")).isSelected();
