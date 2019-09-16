@@ -19,16 +19,31 @@ public class ContactTest extends ScriptBase {
 
     }
     @Test
-    public void verifycontactus1() {
+    public void verifycontactus() {
+        log.info("** Verify Contact Us *** Test Starts");
        contactPage= new ContactPage(driver);
        contactPage.customerService();
-    }
-    @Test
-    public void varifySendAMessage(){
-        contactPage=new ContactPage(driver);
-        contactPage.sendmessage("djahan@yahoo.com","123456","please take a look at my order");
+        log.info("** Verify Contact Us *** Test Ends");
 
     }
+    @Test
+    public void verifymessagesent() {
+        log.info("** Verify Contact Us *** Test Starts");
+        contactPage= new ContactPage(driver);
+        contactPage.messagesent("djahan@yahoo.com","123456","hello");
+        log.info("** Verify Contact Us *** Test Ends");
+    }
+    @Test
+    public void varifySendAMessage()throws InterruptedException{
+        log.info("** Verify Message Sent *** Test Starts");
+        contactPage=new ContactPage(driver);
+        contactPage.sendmessage("djahan@yahoo.com","123456","please take a look at my order");
+        log.info("** Verify Message Sent *** Test Ends");
+    }
+
+
+
+
     @AfterTest
     public void closebrowser(){
             driver.close();

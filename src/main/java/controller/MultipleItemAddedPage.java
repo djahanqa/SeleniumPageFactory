@@ -75,19 +75,27 @@ public class MultipleItemAddedPage extends ScriptBase {
     }
     public void changeQuantity(WebDriver driver) throws InterruptedException {
         homepage.click();
+        log.info(" home page Button Clicked");
         mouseOver(printedDress, driver);
+        log.info(" Mouseover on printed Dress");
         printedDress.click();
+        log.info(" printed dress clicked");
         Thread.sleep(5000);
         looptest(driver);
-        //Assert.assertEquals(quantity,quantity);
+        log.info(" using for loop added quantity of the shirt");
+
 
     }
 
     public void changeSize(WebDriver driver) {
         homepage.click();
+        log.info(" home page Button Clicked");
         mouseOver(printedDress, driver);
+        log.info(" Mouseover on printed Dress");
         printedDress.click();
+        log.info(" printed dress clicked");
         dropdown(size, "M");
+        log.info(" chose M size using drop down button");
     }
 
 

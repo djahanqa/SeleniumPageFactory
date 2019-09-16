@@ -39,18 +39,28 @@ public class LoginPage extends ScriptBase {
 
     public void invalidSignin(String email, String password){
         signinButton.click();
+        log.info(" Sign in Button Clicked");
         emailSendKey.sendKeys(email);
+        log.info(" email Address input");
         passwordSendKey.sendKeys(password);
+        log.info(" password input");
         submitButton.click();
+        log.info(" submit button clicked");
         Assert.assertEquals(signInMessageFailed,signInMessageFailed);
+        log.info(" expected and actual result Sign in Massage failed displays");
     }
 
     public void validSignin(String email, String password){
         signinButton.click();
+        log.info(" Sign in Button Clicked");
         emailSendKey.sendKeys(email);
+        log.info(" email Address input");
         passwordSendKey.sendKeys(password);
+        log.info(" password input");
         submitButton.click();
+        log.info(" submit button clicked");
         Assert.assertEquals(signInSuccessful,signInSuccessful);
+        log.info(" expected and actual result sign In Successfully Massage failed displays");
 }
 
     public void validSigninWithLogOut(){
@@ -59,24 +69,36 @@ public class LoginPage extends ScriptBase {
 
     public void invalidCreateAccount(String email){
         signinButton.click();
+        log.info(" Sign in Button Clicked");
         emailCreateInput.sendKeys(email);
+        log.info(" email Address input");
         submitCreateAccountButton.click();
         Assert.assertEquals(inValidEmailErrorMessage,inValidEmailErrorMessage);
+
 
     }
 
 
     public void invalidSignup(String email, WebDriver driver, String firstname, String lastname, String signupemail, String signuppassword){
         signinButton.click();
+        log.info(" Sign in Button Clicked");
         emailCreateInput.sendKeys(email);
+        log.info(" email Address input");
         submitCreateAccountButton.click();
+        log.info(" Create account Button clicked");
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         titleMrButton.click();
+        log.info(" clicked on Mr, Button");
         firstNameSendKey.sendKeys(firstname);
+        log.info(" First name input");
         lastNameSendKey.sendKeys(lastname);
+        log.info(" last name input");
         signupEmail.sendKeys(signupemail);
+        log.info(" email address inout");
         signupPassword.sendKeys(signuppassword);
+        log.info(" password input");
         submitRegisterButton.click();
+        log.info(" submit button clickedt");
         Assert.assertEquals(invalidSignpErrorMessage,invalidSignpErrorMessage);
         //email: test420@gmail.com
         //password: admin1234
