@@ -23,8 +23,10 @@ public class WomanCatalog extends ScriptBase {
 public void woman(WebDriver driver,String catalogue){
 
     mouseOver(driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li/a[contains(text(),'"+catalogue+"')]")),driver);
+    log.info("concertinate catalogue");
 
-    }
+
+}
 public void mouseOver(WebElement element,WebDriver driver ){
     Actions action =new Actions(driver);
     element= element;

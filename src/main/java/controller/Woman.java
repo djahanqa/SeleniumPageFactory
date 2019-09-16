@@ -32,15 +32,23 @@ public class Woman extends ScriptBase {
 
     public void topssearch(WebDriver driver, String design) {
         title.click();
+        log.info("title clicked");
         tops.isDisplayed();
+        log.info("tops displayed");
         mouseOver(driver.findElement(By.xpath("//*//a[@title='" + design + "']")), driver);
+        log.info("concertinate design");
+
 
     }
 
     public void dressSearch(WebDriver driver, String dress) {
         title.click();
+        log.info("title clicked");
         dresses.isDisplayed();
+        log.info("Dresses displayed");
         mouseOver(driver.findElement(By.xpath("//*//li[1]//li//a[@title='" + dress + "']")), driver);
+        log.info("concertinate dress");
+
     }
 
     private void mouseOver(WebElement element, WebDriver driver) {

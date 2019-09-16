@@ -85,6 +85,7 @@ public class Homepagee extends ScriptBase {
         public void searchByDemand(WebDriver driver, String demand) {
             homepageNavigation.click();
             driver.findElement(By.xpath("//*[@id='home-page-tabs']/li/a[@class='" + demand + "']")).isDisplayed();
+            log.info("concertinate information of the products have been found");
 
 
         }
@@ -92,14 +93,14 @@ public class Homepagee extends ScriptBase {
         public void informationTree(WebDriver driver, String info) {
 
             driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='" + info + "']")).isDisplayed();
-            log.info("concadinated information of the products have been found");
+            log.info("concertinate information of the products have been found");
 
         }
 
         public void myaccount(WebDriver driver, String information) {
 
             driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='" + information + "']")).isDisplayed();
-            log.info("concadinated information");
+            log.info("concertinate information");
 
         }
 
