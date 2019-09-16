@@ -33,7 +33,6 @@ public class Homepagee extends ScriptBase {
         @FindBy(xpath = "//*[@id='searchbox']/button[@type='submit']")
         WebElement clickButton;
 
-
         @FindBy(css = "#header_logo > a > img")WebElement homepageNavigation;
 
         @FindBy(css = "#contact-link > a")
@@ -50,21 +49,31 @@ public class Homepagee extends ScriptBase {
 
         public void verifyContactUS(String Shirt) {
             CallUs.click();
+            log.info("Clicked on Call Us");
             PhoneNumber.click();
+            log.info("Phone number input");
             ContactUs.click();
+            log.info("Clicked on Contact Us");
             signin.click();
+            log.info("clicked on Sign in");
             TshirtQueary.sendKeys(Shirt);
+            log.info("T-shirt value input");
             ClickSearch.click();
+            log.info("Clicked on search");
             Assert.assertEquals(OneResultFound, OneResultFound);
+            log.info(" Actual and expected result  One result found displays");
 
         }
 
         public void seachspProducts(String products, WebDriver driver, String quantity) {
             Search.clear();
+            log.info("search result cleared");
             Search.sendKeys(products);
+            log.info("new search value products input");
             clickButton.click();
+            log.info("clicked button");
             driver.findElement(By.xpath("//*[@id='center_column']/h1/span[contains(text(),'" + quantity + " results have been found.')]")).isDisplayed();
-
+            log.info("concadinated number of products have been found");
         }
 
         public void catagory(WebDriver driver, String Selectcatagory) {
@@ -83,19 +92,23 @@ public class Homepagee extends ScriptBase {
         public void informationTree(WebDriver driver, String info) {
 
             driver.findElement(By.xpath("//*[@id='block_various_links_footer']/ul/li/a[@title='" + info + "']")).isDisplayed();
-
+            log.info("concadinated information of the products have been found");
 
         }
 
         public void myaccount(WebDriver driver, String information) {
 
             driver.findElement(By.xpath("//*[@id='footer']/div/section[5]/div/ul/li/a[@title='" + information + "']")).isDisplayed();
+            log.info("concadinated information");
 
         }
 
         public void customerService() {
             ContactUs1.click();
+            log.info("clciked Contact US");
             Assert.assertEquals(customerService, customerService);
+            log.info(" Actual and expected result Costomer service displays");
+
         }
 
     }
