@@ -49,7 +49,7 @@ public class OneItemAddedToCartPage extends ScriptBase {
 
     }
 
-    public void addItemToCart(WebDriver driver,String emailAddress,String pass)throws InterruptedException {
+        public void addItemToCart(WebDriver driver,String emailAddress,String pass)throws InterruptedException {
         mouseOver(blouse,driver);
         log.info("Mouse over on blouse");
         addToCart.click();
